@@ -1,0 +1,121 @@
+<!--
+ * Copyright 2014 Roland Gisler
+ * Hochschule Luzern Technik & Architektur, Switzerland
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<project name="netbeans" basedir="../..">
+   
+   <!-- Originales build.xml importieren -->
+   <import file="${basedir}/build.xml" />
+    
+   <!-- runtime classpath -->
+   <path id="nb.runtime.classpath">
+      <path location="${classes}" />
+      <path refid="libset.runtime" />
+   </path>
+
+   <!-- test classpath -->
+   <path id="nb.test.classpath">
+      <path location="${test-classes}" />
+      <path refid="libset.test" />
+      <path refid="nb.runtime.classpath" />
+   </path>
+   
+   <!-- ================================================================== -->
+   <!-- Target: nb.run.single -->
+   <!-- Startet eine einzelne Klasse (mit main). -->
+   <!-- ================================================================== -->
+   <target name="nb.run.single" depends="compile">
+      <echo message="Starting single class '${run.class}'..." level="info" />
+      <java classname="${run.class}" fork="true">
+         <classpath refid="nb.runtime.classpath" />
+      </java>
+   </target>
+
+   <!-- ================================================================== -->
+   <!-- Target: nb.test.single -->
+   <!-- Führt einen einzelnen Testfall aus. -->
+   <!-- ================================================================== -->
+   <target name="nb.test.single" depends="compile">
+      <echo message="Running single test '${test.class}'..." level="info" />
+      <junit fork="true"
+             forkmode="once"
+             haltonfailure="false"
+             showoutput="true">
+         <formatter usefile="false" type="brief" />
+         <test name="${test.class}" />
+         <classpath refid="nb.test.classpath" />
+      </junit>
+   </target>
+
+   <!-- ================================================================== -->
+   <!-- Target: nb.debug -->
+   <!-- Startet den Debugger für die Applikation. -->
+   <!-- ================================================================== -->
+   <target name="nb.debug" depends="compile">
+      <echo message="Starting debugging..." level="info" />
+      <nbjpdastart addressproperty="jpda.address" name="${ant.project}" transport="dt_socket">
+         <classpath refid="nb.runtime.classpath" />
+      </nbjpdastart>        
+      <java classname="${proj.startclass}" fork="true">
+         <jvmarg value="-Xdebug"/>
+         <jvmarg value="-Xnoagent"/>
+         <jvmarg value="-Djava.compiler=none"/>
+         <jvmarg value="-Xrunjdwp:transport=dt_socket,address=${jpda.address}"/>
+         <classpath refid="nb.runtime.classpath" />
+      </java>
+   </target>
+   
+   <!-- ================================================================== -->
+   <!-- Target: nb.debug.single -->
+   <!-- Startet den Debugger für eine einzelne Klasse (mit main). -->
+   <!-- ================================================================== -->
+   <target name="nb.debug.single" depends="compile">
+      <echo message="Starting debugging..." level="info" />
+      <nbjpdastart addressproperty="jpda.address" name="${ant.project}" transport="dt_socket">
+         <classpath refid="nb.runtime.classpath" />
+      </nbjpdastart>        
+      <java classname="${debug.class}" fork="true">
+         <jvmarg value="-Xdebug"/>
+         <jvmarg value="-Xnoagent"/>
+         <jvmarg value="-Djava.compiler=none"/>
+         <jvmarg value="-Xrunjdwp:transport=dt_socket,address=${jpda.address}"/>
+         <classpath refid="nb.runtime.classpath" />
+      </java>
+   </target>
+
+   <!-- ================================================================== -->
+   <!-- Target: nb.debug.test.single -->
+   <!-- Führt einen einzelnen Testfall im Debugger aus. -->
+   <!-- ================================================================== -->
+   <target name="nb.debug.test.single" depends="compile">
+      <echo message="Debugging single test '${test.class}'..." level="info" />
+      <nbjpdastart addressproperty="jpda.address" name="${ant.project}" transport="dt_socket">
+         <classpath refid="nb.test.classpath" />
+      </nbjpdastart>        
+      <junit fork="true"
+             forkmode="once"
+             haltonfailure="false"
+             showoutput="true">
+         <jvmarg value="-Xdebug"/>
+         <jvmarg value="-Xnoagent"/>
+         <jvmarg value="-Djava.compiler=none"/>
+         <jvmarg value="-Xrunjdwp:transport=dt_socket,address=${jpda.address}"/>
+         <formatter usefile="false" type="brief" />
+         <test name="${test.class}" />
+         <classpath refid="nb.test.classpath" />
+      </junit>
+   </target>  
+</project>
