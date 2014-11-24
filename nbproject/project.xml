@@ -168,6 +168,7 @@
         <java-data xmlns="http://www.netbeans.org/ns/freeform-project-java/4">
             <compilation-unit>
                 <package-root>src/main/java</package-root>
+                <classpath mode="compile">lib/JSON-java-1.0.0.jar</classpath>
                 <built-to>build/classes</built-to>
                 <javadoc-built-to>build/javadoc</javadoc-built-to>
                 <source-level>1.8</source-level>
