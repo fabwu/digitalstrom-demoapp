@@ -40,6 +40,7 @@ public class StartMainJFrame extends javax.swing.JFrame {
     public StartMainJFrame() {
         initComponents();
         initWebcam();
+        setTitle("digitalStrom Demo-App");
     }
 
     /**
