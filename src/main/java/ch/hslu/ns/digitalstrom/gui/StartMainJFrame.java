@@ -85,9 +85,6 @@ public class StartMainJFrame extends javax.swing.JFrame {
         jToggleButton2 = new javax.swing.JToggleButton();
         jToggleButton3 = new javax.swing.JToggleButton();
         jToggleButton10 = new javax.swing.JToggleButton();
-        jSlider1 = new javax.swing.JSlider();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jButton2 = new javax.swing.JButton();
@@ -237,14 +234,6 @@ public class StartMainJFrame extends javax.swing.JFrame {
             }
         });
 
-        jSlider1.setEnabled(false);
-
-        jLabel4.setText("Min.");
-        jLabel4.setEnabled(false);
-
-        jLabel5.setText("Max.");
-        jLabel5.setEnabled(false);
-
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jTextArea1.setText("click connect to start, then wait  30-50 seconds before panic.\nwatch the aizo testtrack webcam below:\nhttp://testrack1.aizo.com:554\nstandardport is 8080");
@@ -297,25 +286,18 @@ public class StartMainJFrame extends javax.swing.JFrame {
                         .addComponent(canvasWebcam, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addGap(158, 158, 158)
-                                .addComponent(jLabel5))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jToggleButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jToggleButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jToggleButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jToggleButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jSlider1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jToggleButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jToggleButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jToggleButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jToggleButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jToggleButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jToggleButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -342,13 +324,8 @@ public class StartMainJFrame extends javax.swing.JFrame {
                                 .addComponent(jButton4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton5)))
-                        .addGap(20, 20, 20)
-                        .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel4))
-                .addGap(30, 30, 30)
+                        .addGap(44, 44, 44)))
+                .addGap(50, 50, 50)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
                     .addComponent(canvasWebcam, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -420,54 +397,6 @@ public class StartMainJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldServerActionPerformed
 
-    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        //Info
-        System.out.println("Device-Info");
-        this.devices = jsonReader.getDeviceMap();
-        String dsid = devices.get(selectedText);
-
-        jTextArea1.append("\ndsid=" + dsid);
-        jToggleButton2.setSelected(false);
-    }//GEN-LAST:event_jToggleButton2ActionPerformed
-
-    private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
-        try {
-            jsonReader.digitalServerDeviceCommando("3504175fe000000000007ba7", "blink");
-            jsonReader.digitalServerDeviceCommando("13504175fe0000000000042ff", "blink");
-
-        } catch (IOException ex) {
-            System.err.println("Fehler mit Kommando!!");
-        }
-        jToggleButton5.setSelected(false);
-    }//GEN-LAST:event_jToggleButton5ActionPerformed
-
-    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
-        // TODO Blink selected
-        this.devices = jsonReader.getDeviceMap();
-        String dsid = devices.get(selectedText);
-
-        try {
-            jsonReader.digitalServerDeviceCommando(dsid, "blink");
-        } catch (IOException ex) {
-            System.err.println("Fehler mit Kommando!!");
-        }
-        jToggleButton3.setSelected(false);
-
-    }//GEN-LAST:event_jToggleButton3ActionPerformed
-
-    private void jToggleButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton8ActionPerformed
-        // turn divice Off
-        this.devices = jsonReader.getDeviceMap();
-        String dsid = devices.get(selectedText);
-        try {
-            jsonReader.digitalServerDeviceCommando(dsid, "turnOff");
-        } catch (IOException ex) {
-            System.err.println("Fehler mit Kommando!!");
-        }
-        jToggleButton8.setSelected(false);
-
-    }//GEN-LAST:event_jToggleButton8ActionPerformed
-
     private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList1ValueChanged
 
         if (evt.getLastIndex() > 0) {
@@ -478,33 +407,6 @@ public class StartMainJFrame extends javax.swing.JFrame {
 
 
 System.out.println(evt.getLastIndex());    }//GEN-LAST:event_jList1ValueChanged
-
-    private void jToggleButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton10ActionPerformed
-        // turn divice On
-        this.devices = jsonReader.getDeviceMap();
-        String dsid = devices.get(selectedText);
-        try {
-            jsonReader.digitalServerDeviceCommando(dsid, "turnOn");
-        } catch (IOException ex) {
-            System.err.println("Fehler mit Kommando!!");
-        }
-        jToggleButton10.setSelected(false);
-
-    }//GEN-LAST:event_jToggleButton10ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // gett value
-        this.devices = jsonReader.getDeviceMap();
-        String dsid = devices.get(selectedText);
-        try {
-            String s = selectedText + " " + jsonReader.digitalServerDeviceCommando(dsid, "getOutputValue", 0);
-            jTextArea1.append("\n" + s);
-            System.out.println(s);
-        } catch (IOException ex) {
-            System.err.println("Fehler mit Kommando!!");
-        }
-        jButton4.setSelected(false);
-    }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // get all values
@@ -523,6 +425,20 @@ System.out.println(evt.getLastIndex());    }//GEN-LAST:event_jList1ValueChanged
         }
         jButton5.setSelected(false);
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // gett value
+        this.devices = jsonReader.getDeviceMap();
+        String dsid = devices.get(selectedText);
+        try {
+            String s = selectedText + " " + jsonReader.digitalServerDeviceCommando(dsid, "getOutputValue", 0);
+            jTextArea1.append("\n" + s);
+            System.out.println(s);
+        } catch (IOException ex) {
+            System.err.println("Fehler mit Kommando!!");
+        }
+        jButton4.setSelected(false);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // turn all values on
@@ -562,6 +478,64 @@ System.out.println(evt.getLastIndex());    }//GEN-LAST:event_jList1ValueChanged
         jButton3.setSelected(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jToggleButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton10ActionPerformed
+        // turn divice On
+        this.devices = jsonReader.getDeviceMap();
+        String dsid = devices.get(selectedText);
+        try {
+            jsonReader.digitalServerDeviceCommando(dsid, "turnOn");
+        } catch (IOException ex) {
+            System.err.println("Fehler mit Kommando!!");
+        }
+        jToggleButton10.setSelected(false);
+    }//GEN-LAST:event_jToggleButton10ActionPerformed
+
+    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
+        // TODO Blink selected
+        this.devices = jsonReader.getDeviceMap();
+        String dsid = devices.get(selectedText);
+
+        try {
+            jsonReader.digitalServerDeviceCommando(dsid, "blink");
+        } catch (IOException ex) {
+            System.err.println("Fehler mit Kommando!!");
+        }
+        jToggleButton3.setSelected(false);
+    }//GEN-LAST:event_jToggleButton3ActionPerformed
+
+    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+        //Info
+        System.out.println("Device-Info");
+        this.devices = jsonReader.getDeviceMap();
+        String dsid = devices.get(selectedText);
+
+        jTextArea1.append("\ndsid=" + dsid);
+        jToggleButton2.setSelected(false);
+    }//GEN-LAST:event_jToggleButton2ActionPerformed
+
+    private void jToggleButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton8ActionPerformed
+        // turn divice Off
+        this.devices = jsonReader.getDeviceMap();
+        String dsid = devices.get(selectedText);
+        try {
+            jsonReader.digitalServerDeviceCommando(dsid, "turnOff");
+        } catch (IOException ex) {
+            System.err.println("Fehler mit Kommando!!");
+        }
+        jToggleButton8.setSelected(false);
+    }//GEN-LAST:event_jToggleButton8ActionPerformed
+
+    private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
+        try {
+            jsonReader.digitalServerDeviceCommando("3504175fe000000000007ba7", "blink");
+            jsonReader.digitalServerDeviceCommando("13504175fe0000000000042ff", "blink");
+
+        } catch (IOException ex) {
+            System.err.println("Fehler mit Kommando!!");
+        }
+        jToggleButton5.setSelected(false);
+    }//GEN-LAST:event_jToggleButton5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -585,15 +559,12 @@ System.out.println(evt.getLastIndex());    }//GEN-LAST:event_jList1ValueChanged
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JList jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JSlider jSlider1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextFieldPassword;
     private javax.swing.JTextField jTextFieldServer;
